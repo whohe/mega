@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  web:
+    build:
+      context: "$PWD"
+      dockerfile: Dockerfile
+    volumes:
+      - .:/mnt
+    ports:
+      - "80:80"
+    tty: true
+    stdin_open: true
